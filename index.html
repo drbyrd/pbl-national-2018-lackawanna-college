@@ -35,6 +35,9 @@
 	</script>
 	<!-- Popper JS 1.12.9 -->
 	<!-- Bootstrap 4.0.0 JS -->
+	<!-- Date Picker -->
+	<script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
 	</script>
@@ -177,7 +180,7 @@
   	<span class="step-circle">2</span>
     <h5 class="card-title step-title">Drop it off.</h5>
     <p class="card-text">Come by one of our offices or distribution centers and hand over your donations.</p>
-    <a href="#" class="card-link">Card link</a>
+    <a href="#" data-target=".modal-five" data-toggle="modal" class="card-link">Pick a Time</a>
   </div>
 </div>
 </div>
@@ -665,6 +668,51 @@
 		</div>
 	</div>
 	<!-- Large modal three-->
+		<!-- Large modal one-->
+
+
+	<div class="modal fade bd-example-modal-lg modal-five" id="dateModal" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="resumeModalLongTitle">Pick a Time</h5>
+					<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden=
+					"true">&times;</span></button>
+				</div>
+
+
+				<div class="modal-body">
+					<form>
+  <div class="form-group">
+    <label for="Inputname">Your Name</label>
+    <input type="text" class="form-control" id="InputName" aria-describedby="nameHelp" placeholder="Enter Name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">What are you donating</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+  	<label for="exampleFormControlTextarea1">Pick a Date</label>
+  	 <input id="datepicker" width="276" />
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Large modal one-->
 	<!--- Footer -->
 
 
