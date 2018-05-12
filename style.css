@@ -7,62 +7,39 @@ html, body {
 	background-color: #f8f8f8;
 	-webkit-animation: fadein 1.256s;
 	/* Safari, Chrome and Opera > 12.1 */
-	-moz-animation: fadein 1.256s;
 	/* Firefox < 16 */
-	-ms-animation: fadein 1.256s;
 	/* Internet Explorer */
-	-o-animation: fadein 1.256s;
 	/* Opera < 12.1 */
 	animation: fadein 1.256s;
 }
 @keyframes fadein {
 	from {
 		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	}
 	to {
 		opacity: 1;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	}
 }
 /* Firefox < 16 */
 
-@-moz-keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
 /* Safari, Chrome and Opera > 12.1 */
 
 @-webkit-keyframes fadein {
 	from {
 		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	}
 	to {
 		opacity: 1;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	}
 }
 /* Internet Explorer */
 
-@-ms-keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
 /* Opera < 12.1 */
 
-@-o-keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
 .modal-content iframe {
 	margin: 0 auto;
 	display: block;
@@ -89,6 +66,7 @@ Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.ph
 /* /Fluid Video Wrapper */
 
 .navbar {
+	padding: 12.8px;
 	padding: .8rem;
 }
 .navbar-toggler-icon {
@@ -102,7 +80,7 @@ Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.ph
 	font-size: 1.1em !important;
 }
 .bg-blue {
-	background-color: #42B5C1;
+	background-color: rgba(66, 181, 193, 0.87);
 	box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.75);
 }
 .navbar-light .navbar-nav .nav-link {
@@ -120,6 +98,7 @@ Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.ph
 .carousel-caption {
 	position: absolute;
 	top: 50%;
+	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	/*--- Centers Image --*/
 }
@@ -138,6 +117,7 @@ Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.ph
 	font-size: 200%;
 	font-weight: 500;
 	text-shadow: 1px 1px 10px #000;
+	padding-bottom: 16px;
 	padding-bottom: 1rem;
 }
 .btn-primary {
@@ -149,21 +129,26 @@ Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.ph
 	border: 1px solid #563d7c;
 }
 .jumbotron {
+	padding: 16px;
 	padding: 1rem;
 	border-radius: 0;
 }
 .padding {
+	padding-bottom: 32px;
 	padding-bottom: 2rem;
 }
 .welcome {
 	width: 75%;
 	margin: 0 auto;
+	padding-top: 32px;
 	padding-top: 2rem;
 }
 .welcome hr {
 	border-top: 2px solid #b4b4b4;
 	width: 95%;
+	margin-top: 4.8px;
 	margin-top: .3rem;
+	margin-bottom: 16px;
 	margin-bottom: 1rem;
 }
 .fa-gratipay {
@@ -177,10 +162,12 @@ Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.ph
 }
 .fa-gratipay, .fa-handshake, .fa-check {
 	font-size: 4em;
+	margin: 16px;
 	margin: 1rem;
 }
 .emoji-reveal {
 	width: 100%;
+	margin-bottom: 16px;
 	margin-bottom: 1rem;
 }
 .gif {
@@ -188,6 +175,7 @@ Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.ph
 }
 .social a {
 	font-size: 4.5em;
+	padding: 48px;
 	padding: 3rem;
 }
 .fa-facebook {
@@ -211,12 +199,15 @@ Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.ph
 footer {
 	background-color: #58757A;
 	color: #d5d5d5;
+	padding-top: 32px;
 	padding-top: 2rem;
 }
 .light {
 	border-top: 1px solid #d5d5d5;
 	width: 75%;
+	margin-top: 12.8px;
 	margin-top: .8rem;
+	margin-bottom: 16px;
 	margin-bottom: 1rem;
 }
 footer a {
@@ -228,7 +219,9 @@ footer a {
 .light-100 {
 	border-top: 1px solid #d5d5d5;
 	width: 100%;
+	margin-top: 12.8px;
 	margin-top: .8rem;
+	margin-bottom: 16px;
 	margin-bottom: 1rem;
 }
 .step-circle {
@@ -239,11 +232,17 @@ footer a {
 	background: #509EA9;
 	border: 2px solid #666;
 }
+/* ############################
+Boostrap Pricing Table
+Source: https://codepen.io/danzawadzki/pen/mOoeNM
+############################ */
+
 .step-card {
 	background-color: #2991d7;
 	padding-top: 33px;
 }
 .step-title {
+	margin-top: 44px;
 	margin-top: 2.75rem;
 }
 .step-two {
@@ -256,6 +255,7 @@ footer a {
 	border: none;
 }
 .step-two:hover {
+	-webkit-transition: box-shadow 0.5s ease;
 	transition: box-shadow 0.5s ease;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -265,12 +265,14 @@ footer a {
 .step-card-one {
 	border: 0;
 	border-radius: 0px;
-	-webkit-box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.08);
 	box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.08);
+	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
+	padding: 36px 0;
 	padding: 2.25rem 0;
 	position: relative;
 	will-change: transform;
+	min-height: 440px;
 	min-height: 27.5rem;
 }
 .step-card-one:after {
@@ -281,11 +283,12 @@ footer a {
 	width: 0%;
 	height: 5px;
 	background-color: #57e2b2;
+	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
 .step-card-one:hover {
+	-webkit-transform: scale(1.05);
 	transform: scale(1.05);
-	-webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
 	box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
 }
 .step-card-one:hover:after {
@@ -293,10 +296,12 @@ footer a {
 }
 .step-card-one .card-header {
 	background-color: white;
+	padding-left: 32px;
 	padding-left: 2rem;
 	border-bottom: 0px;
 }
 .step-card-one .card-title {
+	margin-bottom: 16px;
 	margin-bottom: 1rem;
 }
 .step-card-one .card-block {
@@ -304,16 +309,20 @@ footer a {
 }
 .step-card-one .list-group-item {
 	border: 0px;
+	padding: 4px;
 	padding: .25rem;
 	color: #808080;
 	font-weight: 300;
 }
 .display-2 {
+	font-size: 112px;
 	font-size: 7rem;
+	letter-spacing: -8px;
 	letter-spacing: -.5rem;
 }
 .btn-gradient {
 	background-color: #f2f2f2;
+	-webkit-transition: background .3s ease-in-out;
 	transition: background .3s ease-in-out;
 }
 .btn-gradient:hover {
@@ -331,6 +340,14 @@ span.number-center {
 }
 .h1-spacing {
 	letter-spacing: 5px;
+}
+.theme-button {
+	background-color: #42B5C1;
+	border: none;
+}
+.theme-button:hover {
+	background-color: #509EA9;
+	border: none;
 }
 /*---Media Queries --*/
 
@@ -429,6 +446,7 @@ span.number-center {
 
 .carousel-item {
 	transition: -webkit-transform 0.5s ease;
+	-webkit-transition: -webkit-transform 0.5s ease;
 	transition: transform 0.5s ease;
 	transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 	-webkit-backface-visibility: visible;
@@ -437,6 +455,7 @@ span.number-center {
 /*--- Bootstrap Padding Fix --*/
 
 [class*="col-"] {
+	padding: 16px;
 	padding: 1rem;
 }
 /*
